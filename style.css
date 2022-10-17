@@ -1,0 +1,107 @@
+:root{
+	--primary: #0B5ED7;
+	--secondary: #f1f1ee;
+	--border-radius: 8px;
+	--font-size: 14px;
+}
+* {
+	font-family: Arial, Helvetica, sans-serif;
+}
+body{
+	background: rgb(219, 221, 232);
+	background: radial-gradient(circle, rgba(219, 221, 232, 1) 0%, rgba(160, 184, 229, 1) 63%, rgba(129, 165, 227, 1) 100%);
+}
+.tag{
+	text-align: center;
+	color: var(--primary);
+}
+input[type='text'],
+input[type='number'],
+select{
+	height: 25px;
+	font-size: var(--font-size);
+	padding: 8px;
+	border: 0;
+	border-radius: var(--border-radius);
+	background-color: var(--secondary);
+	box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.06);
+}
+input[type='radio'],
+input[type='checkbox']{
+	width: 1.1rem;
+	height: 1.1rem;
+	accent-color: var(--primary);
+	background-color: var(--secondary);
+}
+select:focus{
+	outline: 2px solid var(--primary);
+}
+input[type='text']:focus,
+input[type='number']:focus,
+textarea:focus{
+	outline: 2px solid var(--primary);
+	background-color: white;
+}
+textarea {
+	padding: 10px;
+	background-color: var(--secondary);
+	border-radius: var(--border-radius);
+	border: 0;
+	box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.06);
+}
+button {
+	margin: 5px 8px; 
+	padding: 10px 12px;
+	font-size: var(--font-size);
+	width: 80px;
+	background-color: var(--primary);
+	color: var(--secondary);
+	transition: 300ms;
+	border-radius: var(--border-radius);
+	border: 0;
+	cursor: pointer;
+}
+button:hover {
+	outline: 2px solid var(--primary);
+	background-color: var(--secondary);
+	color: black;
+}
+button:active{
+	outline: 2px solid var(--primary);
+	background-color: var(--primary);
+	color: white;
+}
+.form {
+	display: flex;
+	justify-content: center;
+}
+.table {
+	width: 70%;
+	margin: auto;
+	text-align: center;
+	margin-bottom: 3em;
+}
+.table-content {
+	border-collapse: collapse;
+	vertical-align: middle;
+	margin: auto;
+}
+.table-content thead tr {
+	background-color: var(--primary);
+	color: white;
+	text-align: center;
+	font-weight: 600;
+}
+.table-content td,
+.table-content th {
+	border: 2px solid var(--secondary);
+	padding: 10px 20px;
+}
+.table-content tr:nth-child(even) {
+	background-color: #e4e4e0;
+}
+.table-content tbody tr:hover{
+	background-color: var(--primary);
+	color: white;
+	cursor: pointer;
+}

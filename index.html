@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Tugas pertemuan 8 membuat form dan static table" />
+  <meta name="author" content="Angga Kurnia - 201011401198" />
+  <title>Pertemuan 8 | Latihan Form</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div style="position: absolute">
+    <p>Nama: Angga Kurnia</p>
+    <p>NIM: 201011401198</p>
+    <p>Kelas: 05TPLE004</p>
+  </div>
+  <section class="form" name="form">
+    <form onsubmit="formHandler(event)">
+      <table cellpadding="4">
+        <h1 class="tag">Free Registration</h1>
+        <tr>
+          <td>Nama</td>
+          <td>:</td>
+          <td>
+            <input type="text" style="width: 30%" name="nama" placeholder="Nama" required />
+          </td>
+        </tr>
+        <tr>
+          <td>Tgl Lahir</td>
+          <td>:</td>
+          <td>
+            <input maxlength="2" min="1" max="31" type="number" style="width: 20%" name="tgl" placeholder="Tanggal"
+              required />
+            /
+            <input maxlength="2" min="1" max="12" type="number" style="width: 20%" name="bln" placeholder="Bulan"
+              required />
+            /
+            <input maxlength="4" min="1900" max="2022" type="number" style="width: 20%" name="thn" placeholder="Tahun"
+              required />
+          </td>
+        </tr>
+        <tr>
+          <td>Alamat</td>
+          <td>:</td>
+          <td>
+            <textarea name="alamat" id="" cols="50" rows="5" placeholder="Alamat" required></textarea>
+          </td>
+        </tr>
+        <tr>
+          <td>Kota</td>
+          <td>:</td>
+          <td>
+            <input type="text" style="width: 30%" name="kota" placeholder="Kota" required />
+          </td>
+        </tr>
+        <tr>
+          <td>Pekerjaan</td>
+          <td>:</td>
+          <td>
+            <select style="height: 30px" name="pekerjaan" required>
+              <option value="">---Pilih----</option>
+              <option value="Buruh">Buruh</option>
+              <option value="Petani">Petani</option>
+              <option value="Karyawan">Karyawan Swasta</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>Jenis Kelamin</td>
+          <td>:</td>
+          <td>
+            <input type="radio" name="jk" id="l" value="Laki-laki" required />
+            <label for="l">Laki-laki</label>
+            <input type="radio" name="jk" id="p" value="Perempuan" required />
+            <label for="p">Perempuan</label>
+          </td>
+        </tr>
+        <tr>
+          <td>Hobby</td>
+          <td>:</td>
+          <td>
+            <input type="checkbox" id="re" name="hobby" value="Reading" />
+            <label for="re">Reading</label><br />
+            <input type="checkbox" id="sp" name="hobby" value="Sport" />
+            <label for="sp">Sport</label><br />
+            <input type="checkbox" id="sing" name="hobby" value="Singing" />
+            <label for="sing">Singing</label><br />
+            <input type="checkbox" id="tra" name="hobby" value="Traveling" />
+            <label for="tra">Traveling</label><br />
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            <button type="submit" class="btn">Simpan</button>
+            <button type="reset" class="btn">Reset</button>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </section>
+  <hr width="50%" color="#0B5ED7" />
+  <section class="table">
+    <h1 class="tag">Data Registration</h1>
+    <table cellpadding="12" class="table-content">
+      <thead>
+        <tr>
+          <th>Nama</th>
+          <th>TTL</th>
+          <th>Alamat</th>
+          <th>Kota</th>
+          <th>Pekerjaan</th>
+          <th>Jenis Kelamin</th>
+          <th>Hobi</th>
+        </tr>
+      </thead>
+      <tbody id="content">
+        <tr id="data-kosong">
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <script src="./storage.js"></script>
+  <script src="./script.js"></script>
+  <script>
+    renderData();
+  </script>
+</body>
+
+</html>
